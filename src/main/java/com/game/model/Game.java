@@ -7,7 +7,7 @@ public class Game {
 	Player player2;
 	private GameStatus gameStatus;
 	private int[][] board;
-	private String winner;
+	private TicToe winner;
 	
 	
 	public String getGameId() {
@@ -40,10 +40,10 @@ public class Game {
 	public void setBoard(int[][] board) {
 		this.board = board;
 	}
-	public String getWinner() {
+	public TicToe getWinner() {
 		return winner;
 	}
-	public void setWinner(String winner) {
+	public void setWinner(TicToe winner) {
 		this.winner = winner;
 	}
 
