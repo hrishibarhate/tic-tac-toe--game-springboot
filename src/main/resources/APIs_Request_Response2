@@ -1,0 +1,39 @@
+API's Request and Response:
+1) POST   localhost:8080/game/connect
+Request : 
+{
+    "player" : {
+        "login":"developer"
+        },
+    "gameId":"3a3beb89-b731-4c31-bf77-fe57125c8ec7"
+}
+
+Response: 
+{
+    "gameId": "3a3beb89-b731-4c31-bf77-fe57125c8ec7",
+    "player1": {
+        "login": "java-master"
+    },
+    "player2": {
+        "login": "developer"
+    },
+    "gameStatus": "IN_PROGRESS",
+    "board": [
+        [
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0
+        ]
+    ],
+    "winner": null
+}
