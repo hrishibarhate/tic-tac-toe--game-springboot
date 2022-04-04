@@ -5,12 +5,12 @@ Request :
     "player" : {
         "login":"developer"
         },
-    "gameId":"3a3beb89-b731-4c31-bf77-fe57125c8ec7"
+    "gameId":"01c39210-4ee7-4342-9d8e-b2be4d5e4886"
 }
 
 Response: 
 {
-    "gameId": "3a3beb89-b731-4c31-bf77-fe57125c8ec7",
+    "gameId": "01c39210-4ee7-4342-9d8e-b2be4d5e4886",
     "player1": {
         "login": "java-master"
     },
