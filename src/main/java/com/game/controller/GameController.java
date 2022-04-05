@@ -1,5 +1,6 @@
 package com.game.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +25,8 @@ public class GameController {
 	
 	private final GameService gameService = new GameService();
 	
-	private final SimpMessagingTemplate simpMessagingTemplate = null;
+	@Autowired
+	private SimpMessagingTemplate simpMessagingTemplate;
 
     @PostMapping("/start")
     public ResponseEntity<Game> start(@RequestBody Player player) {

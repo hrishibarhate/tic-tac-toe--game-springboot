@@ -1,0 +1,71 @@
+API's Request and Response:
+1) POST   localhost:8080/game/gameplay
+Request : 
+{
+    "type" : "X",
+    "coordinateX": 0,
+    "coordinateY": 0,
+    "gameId":"e4c5ce2b-63b4-48bc-a2be-be011b0e4dda"
+}
+
+Response: 
+{
+    "gameId": "e4c5ce2b-63b4-48bc-a2be-be011b0e4dda",
+    "player1": {
+        "login": "java-master"
+    },
+    "player2": {
+        "login": "developer"
+    },
+    "gameStatus": "IN_PROGRESS",
+    "board": [
+        [
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0
+        ]
+    ],
+    "winner": null
+}
+
+
+============= Play along for now making "O" as winner
+
+{
+    "gameId": "e4c5ce2b-63b4-48bc-a2be-be011b0e4dda",
+    "player1": {
+        "login": "java-master"
+    },
+    "player2": {
+        "login": "developer"
+    },
+    "gameStatus": "IN_PROGRESS",
+    "board": [
+        [
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            0
+        ]
+    ],
+    "winner": "O"
+}
