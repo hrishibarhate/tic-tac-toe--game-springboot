@@ -6,8 +6,8 @@ public enum TicToe {
 
 	private Integer value;
 
-	TicToe(int i) {
-
+	private TicToe(Integer value) {
+		this.value = value;
 	}
 
 	public Integer getValue() {
