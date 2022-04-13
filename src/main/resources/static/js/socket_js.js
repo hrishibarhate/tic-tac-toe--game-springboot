@@ -47,3 +47,30 @@ function create_game() {
 }
 
 
+function connectToRandom() {
+    let login = document.getElementById("login").value;
+    if (login == null || login === '') {
+        alert("Please enter login");
+    } else {
+        $.ajax({
+            url: url + "/game/connect/random",
+            type: 'POST',
+            dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify({
+                "login": login
+            }),
+            success: function (data) {
+                gameId = data.gameId;
+                playerType = 'O';
+                reset();
+                connectToSocket(gameId);
+                alert("Congrats you're playing with: " + data.player1.login);
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        })
+    }
+}
+
