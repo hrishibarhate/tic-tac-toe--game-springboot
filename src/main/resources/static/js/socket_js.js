@@ -74,3 +74,15 @@ function connectToRandom() {
     }
 }
 
+function connectToSpecificGame() {
+    let login = document.getElementById("login").value;
+    if (login == null || login === '') {
+        alert("Please enter login");
+    } else {
+        let gameId = document.getElementById("game_id").value;
+        if (gameId == null || gameId === '') {
+            alert("Please enter game id");
+        }
+
+    }
+}
