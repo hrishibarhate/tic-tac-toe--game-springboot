@@ -83,6 +83,27 @@ function connectToSpecificGame() {
         if (gameId == null || gameId === '') {
             alert("Please enter game id");
         }
-
+        $.ajax({
+            url: url + "/game/connect",
+            type: 'POST',
+            dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify({
+                "player": {
+                    "login": login
+                },
+                "gameId": gameId
+            }),
+            success: function (data) {
+                gameId = data.gameId;
+                playerType = 'O';
+                reset();
+                connectToSocket(gameId);
+                alert("Congrats you're playing with: " + data.player1.login);
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        })
     }
 }
